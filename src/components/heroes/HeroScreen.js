@@ -45,7 +45,7 @@ export const HeroScreen = ({ history }) => {
                     <li className="list-group-item"> <b> First appearance: </b> { first_appearance } </li>
                 </ul>
 
-                <h4>Characters</h4>
+                <h4 className="mt-2">Characters</h4>
                 <p>{ characters }</p>
 
                 <button 
