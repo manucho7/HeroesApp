@@ -1,23 +1,21 @@
-import React from 'react'
+import React, { useMemo } from 'react'
 import { useParams, Redirect } from 'react-router-dom'
 import { getHeroesById } from '../selectors/getHeroById';
 
 export const HeroScreen = ({ history }) => {
     const {heroeId} = useParams();
-    const hero = getHeroesById( heroeId );
+    const hero = useMemo( () => getHeroesById( heroeId ), [ heroeId ]);
 
     if (!hero){
         return <Redirect to="/" />
     }
 
     const handleReturn = () => {
-    
         if ( history.length <= 2 ){
             history.push("/");
         } else {
             history.goBack();
         }
-
     }
 
     const {
@@ -34,7 +32,7 @@ export const HeroScreen = ({ history }) => {
                 <img 
                     src={`../assets/${heroeId}.jpg`}
                     className="img-thumbnail"
-                    alt={superhero}
+                    alt={ superhero }
                 />
             </div>
 
