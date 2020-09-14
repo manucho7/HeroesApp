@@ -5,14 +5,14 @@ import { MemoryRouter } from 'react-router-dom';
 import '@testing-library/jest-dom';
 import '@testing-library/dom';
 
-
-
 describe('Pruebas en PrivateRoute', () => {
     const props = {
         location: {
             pathname: '/marvel'
         }
     }
+
+    Storage.prototype.setItem = jest.fn();
 
     test('debe de mostrar el componente si esta autenticado y guardar localStorage', () => {
         const wrapper = mount(
@@ -25,6 +25,7 @@ describe('Pruebas en PrivateRoute', () => {
             </MemoryRouter>
         );
         expect( wrapper.find('span').exists() ).toBe(true);
+        expect( localStorage.setItem ).toHaveBeenCalledWith('lastPath', '/marvel');
     });
     
 
