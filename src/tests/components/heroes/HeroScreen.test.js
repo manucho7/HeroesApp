@@ -1,6 +1,6 @@
 import React from 'react';
 import { mount } from 'enzyme';
-import { HeroScreen } from '../../components/heroes/HeroScreen';
+import { HeroScreen } from '../../../components/heroes/HeroScreen';
 import { MemoryRouter, Route } from 'react-router-dom';
 import'@testing-library/dom';
 import'@testing-library/jest-dom';
