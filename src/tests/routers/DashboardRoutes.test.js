@@ -28,6 +28,4 @@ describe('Pruebas en <DashBoardRoutes />', () => {
         expect( wrapper ).toMatchSnapshot();
         expect( wrapper.find('.text-info').text().trim() ).toBe('Manu');
     });
-    
-
 })
