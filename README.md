@@ -1,3 +1,5 @@
+Heroes App que muestra los heroes de Marvel y DC respectivamente, utilizando react Router, y varios Hooks.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
